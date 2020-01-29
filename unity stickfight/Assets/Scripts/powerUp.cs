@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class powerUp : MonoBehaviour
 {
-    private float nextActionTime = 0.0f;
-    public float period = 0.1f;
 
     public GameObject snowBall;
+
+    public GameObject ChoiceHolder;
     private float min_X = -15.59f;
     private float max_X = 19.58f;
     // Start is called before the first frame update
@@ -18,7 +18,9 @@ public class powerUp : MonoBehaviour
 
     IEnumerator StartSpawning(){
         yield return new WaitForSeconds(Random.Range(7f,10f));
-        GameObject k = Instantiate(snowBall);
+        GameObject k = Instantiate(snowBall /* ...*/);
+        k.name = snowBall.name;
+        k.transform.SetParent(ChoiceHolder.transform);
         float x = Random.Range(min_X, max_X);
         k.transform.position = new Vector2(x, transform.position.y);
         StartCoroutine(StartSpawning());
