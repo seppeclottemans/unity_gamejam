@@ -7,7 +7,7 @@ public class MultipleplayerCamera : MonoBehaviour
 {
     public List<Transform> targets;
     public float smoothTime = .5f;
-    public float minZoom = 40f;
+    public float minZoom = 30f;
     public float maxZoom = 14f;
     public float zoomLimiter = 50f;
     public bool bounds;
