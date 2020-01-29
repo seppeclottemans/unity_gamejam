@@ -23,8 +23,10 @@ public class PlayerMove : MonoBehaviour
         Vector3 temp = transform.position;
         if(h > 0 ){
             temp.x += speed* Time.deltaTime;
+            sr.flipX = false;
         }else if(h < 0){
             temp.x -= speed * Time.deltaTime;
+            sr.flipX = true;
         }
         transform.position = temp;
     }
