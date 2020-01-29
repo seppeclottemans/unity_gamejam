@@ -1154,7 +1154,10 @@ MonoBehaviour:
   minZoom: 40
   maxZoom: 10
   zoomLimiter: 50
+  bounds: 1
   offset: {x: 0, y: 0, z: -55}
+  minCamPos: {x: -10, y: -10, z: -55}
+  maxCamPos: {x: 10, y: 10, z: 100}
 --- !u!1 &964530510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,7 +1862,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1793100408
 BoxCollider2D:
   m_ObjectHideFlags: 0
