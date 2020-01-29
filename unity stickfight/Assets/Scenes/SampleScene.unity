@@ -1129,7 +1129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.282588, y: 1.282588, z: -55}
+  m_LocalPosition: {x: 1.282588, y: 1.282588, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1152,10 +1152,10 @@ MonoBehaviour:
   - {fileID: 134350508}
   smoothTime: 0.5
   minZoom: 40
-  maxZoom: 10
+  maxZoom: 14
   zoomLimiter: 50
   bounds: 1
-  offset: {x: 0, y: 0, z: -55}
+  offset: {x: 0, y: 0, z: -60}
   minCamPos: {x: -10, y: -10, z: -55}
   maxCamPos: {x: 10, y: 10, z: 100}
 --- !u!1 &964530510
