@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\powerUp.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/cyril.passeleur/Desktop/Unity/unity_gamejam/unity stickfight/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
