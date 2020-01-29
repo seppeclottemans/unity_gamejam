@@ -855,9 +855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ec274c85e6a8a4f830bbdcb16e90f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 113
-  right: 100
-  jump: 122
+  left: 276
+  right: 275
+  jump: 273
   speed: 7
   jumpForce: 20
   groundCheck: {fileID: 1628659754}
@@ -1192,8 +1192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets:
-  - {fileID: 1793100411}
-  - {fileID: 0}
+  - {fileID: 1345080553}
+  - {fileID: 1930801710}
   smoothTime: 0.5
   minZoom: 30
   maxZoom: 14
