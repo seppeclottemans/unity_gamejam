@@ -24,9 +24,13 @@ public class PlayerMove : MonoBehaviour
         if(h > 0 ){
             temp.x += speed* Time.deltaTime;
             sr.flipX = false;
+            anim.SetBool("run", true);
         }else if(h < 0){
             temp.x -= speed * Time.deltaTime;
             sr.flipX = true;
+            anim.SetBool("run", true);
+        }else if (h == 0){
+            anim.SetBool("run", false);
         }
         transform.position = temp;
     }
