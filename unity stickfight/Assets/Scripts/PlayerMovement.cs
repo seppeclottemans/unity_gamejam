@@ -7,37 +7,51 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sr;
 
-    public float speed = 3f;
+    public KeyCode left;
+    public KeyCode right;
+
+    public KeyCode jump;
+    private Rigidbody2D theRB;
+
+    public float speed;
+    public float jumpForce;
+
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask whatIsGround;
+
+    public bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
-        
+        theRB = GetComponent<Rigidbody2D>();
     }
-
     void Awake(){
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
     }
-    void move(){
-        float h = Input.GetAxisRaw("Horizontal");
-        Vector3 temp = transform.position;
-        if(h > 0 ){
-            temp.x += speed* Time.deltaTime;
-            sr.flipX = false;
-            anim.SetBool("run", true);
-        }else if(h < 0){
-            temp.x -= speed * Time.deltaTime;
-            sr.flipX = true;
-            anim.SetBool("run", true);
-        }else if (h == 0){
-            anim.SetBool("run", false);
-        }
-        transform.position = temp;
-    }
-
     // Update is called once per frame
     void Update()
     {
-        move(); 
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+
+        if(Input.GetKey(left)){
+             theRB.velocity = new Vector2(-speed, theRB.velocity.y);
+             anim.SetBool("run", true);
+             sr.flipX = true;
+        }else if (Input.GetKey(right)){
+            theRB.velocity = new Vector2(speed, theRB.velocity.y);
+            anim.SetBool("run", true);
+            sr.flipX = false;
+        }else{
+            theRB.velocity = new Vector2(0, theRB.velocity.y);
+            anim.SetBool("run", false);
+        }
+
+        if(Input.GetKeyDown(jump) && isGrounded){
+            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+        }
+        
     }
 }
