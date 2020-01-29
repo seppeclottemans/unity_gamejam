@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sr;
 
+    public KeyCode left;
+    public KeyCode right;
+
     public float speed = 3f;
     // Start is called before the first frame update
     void Start()
