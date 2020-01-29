@@ -1003,8 +1003,8 @@ MonoBehaviour:
   - {fileID: 1793100411}
   - {fileID: 1559877013}
   smoothTime: 0.5
-  minZoom: 40
-  maxZoom: 10
+  minZoom: 30
+  maxZoom: 14
   zoomLimiter: 50
   bounds: 1
   offset: {x: 0, y: 0, z: -55}
