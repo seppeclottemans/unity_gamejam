@@ -9,7 +9,8 @@ public class MultipleplayerCamera : MonoBehaviour
     public Vector3 offset;
  
     void LateUpdate(){
-
+        if(targets.Count == 0)
+            return;
         
         Vector3 centerpoit = GetCenterPoint();
 
