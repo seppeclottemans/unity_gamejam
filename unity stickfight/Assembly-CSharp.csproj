@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\mainMenu.cs" />
      <Compile Include="Assets\Scripts\collision.cs" />
      <Compile Include="Assets\Scripts\MultipleplayerCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
