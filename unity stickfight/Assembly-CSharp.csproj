@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\collision.cs" />
      <Compile Include="Assets\Scripts\MultipleplayerCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Power_Example(bowl).cs" />
      <Compile Include="Assets\Scripts\powerUp.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/seppe.clottemans/Desktop/unity_gamejam/unity stickfight/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
