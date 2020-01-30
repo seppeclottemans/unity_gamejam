@@ -5,13 +5,11 @@ using UnityEngine;
 public class collision : MonoBehaviour
 {
     private bool pickUpAllowed;
-    public GameObject snowPick;
     private bool pickUpAllowed2;
     // Start is called before the first frame update
     void Start()
     {
         Physics2D.IgnoreLayerCollision(8,9);
-        snowPick.SetActive(false);
     }
 
 
@@ -33,10 +31,9 @@ public class collision : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
+    {     
         if(pickUpAllowed && Input.GetKeyDown(KeyCode.S)){
            PickUp();
-           
         }
         if(pickUpAllowed2 && Input.GetKey(KeyCode.DownArrow)){
            PickUp();
