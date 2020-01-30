@@ -6,6 +6,9 @@ public class collision : MonoBehaviour
 {
     private bool pickUpAllowed;
     private bool pickUpAllowed2;
+
+    public GameObject holder;
+    public GameObject snowPick;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,8 @@ public class collision : MonoBehaviour
 
     private void PickUp(){
         Destroy(gameObject);
+        GameObject k = Instantiate(snowPick);
+        
     }
 
 
