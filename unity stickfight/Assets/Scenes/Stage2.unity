@@ -3444,7 +3444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850213603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0, z: 0}
+  m_LocalPosition: {x: 0.05, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 163269758}
@@ -3522,7 +3522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d353aa849496b3445bbebd85295c713f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowPick: {fileID: 0}
 --- !u!114 &850213609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3672,11 +3671,11 @@ MonoBehaviour:
   - {fileID: 850213604}
   smoothTime: 0.5
   minZoom: 30
-  maxZoom: 14
+  maxZoom: 23
   zoomLimiter: 50
   bounds: 1
   offset: {x: 0, y: 0, z: -55}
-  minCamPos: {x: -20, y: -5, z: -55}
+  minCamPos: {x: -30, y: -5, z: -55}
   maxCamPos: {x: 10, y: 10, z: 100}
 --- !u!81 &885006858
 AudioListener:
@@ -5073,7 +5072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201727849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0, z: 0}
+  m_LocalPosition: {x: 0.05, y: -0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1834901486}
@@ -5151,7 +5150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d353aa849496b3445bbebd85295c713f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowPick: {fileID: 0}
 --- !u!114 &1201727855
 MonoBehaviour:
   m_ObjectHideFlags: 0
