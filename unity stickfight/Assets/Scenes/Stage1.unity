@@ -715,7 +715,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: NaN, y: -4.3527366e+14, z: 3.522564e-38, w: 1.676e-42}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 1793100411}
-  - {fileID: 0}
+  - {fileID: 1559877013}
   smoothTime: 0.5
   minZoom: 30
   maxZoom: 14
