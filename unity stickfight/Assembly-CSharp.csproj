@@ -48,6 +48,7 @@
      <Compile Include="Assets\mainMenu.cs" />
      <Compile Include="Assets\Scripts\collision.cs" />
      <Compile Include="Assets\Scripts\MultipleplayerCamera.cs" />
+     <Compile Include="Assets\Scripts\pickUp.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Power_Example(bowl).cs" />
      <Compile Include="Assets\Scripts\powerUp.cs" />
