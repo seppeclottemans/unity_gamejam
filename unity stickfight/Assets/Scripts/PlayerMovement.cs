@@ -7,24 +7,29 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sr;
 
-    public KeyCode left;
     public KeyCode right;
 
+    public KeyCode left;
+
     public KeyCode jump;
-    private Rigidbody2D theRB;
 
     public float speed;
     public float jumpForce;
 
-    public Transform groundCheck;
+    public bool isGrounded = false;
+
+    public Transform groundCheckPoint;
+
     public float groundCheckRadius;
     public LayerMask whatIsGround;
 
-    public bool isGrounded;
+    private Rigidbody2D rb;
+
+  
     // Start is called before the first frame update
-    void Start()
-    {
-        theRB = GetComponent<Rigidbody2D>();
+    void Start(){
+
+        rb = GetComponent<Rigidbody2D>();
     }
     void Awake(){
         anim = GetComponent<Animator>();
@@ -33,25 +38,31 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-
-        if(Input.GetKey(left)){
-             theRB.velocity = new Vector2(-speed, theRB.velocity.y);
-             anim.SetBool("run", true);
-             sr.flipX = true;
-        }else if (Input.GetKey(right)){
-            theRB.velocity = new Vector2(speed, theRB.velocity.y);
-            anim.SetBool("run", true);
-            sr.flipX = false;
-        }else{
-            theRB.velocity = new Vector2(0, theRB.velocity.y);
-            anim.SetBool("run", false);
-        }
-
-        if(Input.GetKeyDown(jump) && isGrounded){
-            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position,groundCheckRadius, whatIsGround);
+        Move();
         
     }
+
+    void Move(){
+       
+        Vector3 temp = transform.position;
+        if(Input.GetKey(right)){
+            temp.x += speed * Time.deltaTime;
+            anim.SetBool("run", true);
+            sr.flipX = false;
+        }else if (Input.GetKey(left)){
+            temp.x -= speed * Time.deltaTime;
+            anim.SetBool("run", true);
+            sr.flipX = true;
+        }else{
+            anim.SetBool("run", false);
+        }
+        transform.position = temp;
+
+        if( isGrounded && Input.GetKey(jump)){
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            
+        }
+    }
+
 }
